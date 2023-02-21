@@ -17,7 +17,7 @@ after_success:
   - docker build -t robinsmithvee24/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images and push them to docker hub
+  # Take those images and push them to dockerhub
   - docker push robinsmithvee24/multi-client
   - docker push robinsmithvee24/multi-nginx
   - docker push robinsmithvee24/multi-server
